@@ -1,11 +1,24 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCogs } from "@fortawesome/free-solid-svg-icons";
+import { faCogs, faAngleDoubleRight, faTable, faTh, faFileWord, faTachometerAlt} from "@fortawesome/free-solid-svg-icons";
 
 import logo from "../../../assets/icons/logo.png";
-import "./Sidebar.css";
+
 
 function Sidebar(props) {
+
+    const toggleMenu = () => {
+    let body = document.querySelector("body");
+      let hasCollapsed = body.classList.contains("sidebar-menu-collapsed");
+      if(hasCollapsed) {
+       body.classList.remove("sidebar-menu-collapsed");
+       body.classList.add("noscroll");
+      } else {
+        body.classList.remove("noscroll");
+        body.classList.add("sidebar-menu-collapsed");
+      };
+    }
+
   return (
     <>
       {/* <!-- sidebar menu start --> */}
@@ -22,6 +35,9 @@ function Sidebar(props) {
           </a>
         </div>
         {/* <!-- //image logo --> */}
+        <div class="logo-icon text-center">
+            <a href="/" title="logo"><img src={logo} alt="logo-icon"/> </a>
+        </div>
 
         {/* <!-- //logo end --> */}
 
@@ -30,7 +46,7 @@ function Sidebar(props) {
           <ul className="nav nav-pills nav-stacked custom-nav">
             <li>
               <a href="/">
-                <FontAwesomeIcon icon={faCogs} />
+                <FontAwesomeIcon icon={faTachometerAlt} />
                 <span> Dashboard</span>
               </a>
             </li>
@@ -42,30 +58,27 @@ function Sidebar(props) {
             </li>
             <li>
               <a href="/pricing">
-                <FontAwesomeIcon icon={faCogs} />
-                <i className="fa fa-table"></i> <span>Pricing tables</span>
+                <FontAwesomeIcon icon={faTable}/><span> Pricing tables</span>
               </a>
             </li>
             <li>
               <a href="/blocks">
-                <FontAwesomeIcon icon={faCogs} />
-                <i className="fa fa-th"></i> <span>Content blocks</span>
+                <FontAwesomeIcon icon={faTh} /><span>  Content blocks</span>
               </a>
             </li>
             <li>
               <a href="/forms">
-                <FontAwesomeIcon icon={faCogs} />
-                <i className="fa fa-file-text"></i> <span>Forms</span>
+                <FontAwesomeIcon icon={faFileWord} /><span>  Forms</span>
               </a>
             </li>
           </ul>
           {/* <!-- //sidebar nav end --> */}
           {/* <!-- toggle button start --> */}
-          <a className="toggle-btn" onclick="toggleMenu()">
+          <a className="toggle-btn" onClick={toggleMenu}>
             <i className="fa fa-angle-double-left menu-collapsed__left">
               <span>Collapse Sidebar</span>
             </i>
-            <i className="fa fa-angle-double-right menu-collapsed__right"></i>
+            <FontAwesomeIcon icon={faAngleDoubleRight} className="menu-collapsed__right"/>
           </a>
           {/* <!-- //toggle button end --> */}
         </div>
