@@ -1,0 +1,189 @@
+:root {
+    --primary: #4755AB;
+    --secondary: #B162AC;
+    --success: #03c895;
+    --danger: #ff4f81;
+    --heading-color: #2c3038;
+    --para-color: #5d6b71;
+    --light-bg-color: #E7EDF6;
+    --card-shadow: 0 1px 2px 1px rgba(154, 154, 204, .22); }
+  
+  html {
+    scroll-behavior: smooth; }
+  
+  p,
+  .para__style {
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--para-color); }
+  
+  p.small {
+    font-size: 15px; }
+  
+  p.small span,
+  p.small a {
+    font-weight: 500;
+    color: #555;
+    font-size: 14px; }
+  
+  /*-- page-loading-icon --*/
+  .no-js #loader {
+    display: none; }
+  
+  .js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0; }
+  
+  /*--// page-loading-icon --*/
+  .card__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--primary);
+    z-index: 0; }
+  
+  a.card__title {
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 600;
+    color: var(--heading-color);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    text-transform: capitalize; }
+  
+  a.card__title:hover {
+    color: #000; }
+  
+  .btn-style {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 25px;
+    display: inline-block;
+    font-weight: 400;
+    text-transform: capitalize; }
+  
+  .cards__heading {
+    padding: 30px 20px;
+    background: #fff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  
+  .cards__heading span {
+    color: var(--para-color);
+    font-weight: normal; }
+  
+  .cards__heading h3 {
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0; }
+  
+  .align-self {
+    align-self: center; }
+  
+  .border-btn {
+    border: 1px solid var(--primary);
+    color: var(--primary); }
+  
+  .border-btn:hover {
+    background-color: #dbe3f9;
+    border: 1px solid #dbe3f9;
+    color: var(--primary); }
+  
+  a.template,
+  a.category {
+    color: var(--heading-color); }
+  
+  .category label {
+    cursor: pointer;
+    font-weight: 500; }
+  
+  h3.login__title,
+  h3.register__title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--primary); }
+  
+  .login-form,
+  .register-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    min-height: 100vh; }
+  
+  .error {
+    display: grid;
+    align-items: center;
+    min-height: 100vh; }
+  
+  @media (max-width: 500px) {
+    .noscroll {
+      overflow: hidden;
+      height: 100vh; } }
+  
+  @media (max-width: 520px) {
+    .login-form,
+    .register-form,
+    .error {
+      padding: 0 20px; } }
+  
+  @media (max-width: 415px) {
+    a.card__title {
+      font-size: 17px; }
+    h3.login__title,
+    h3.register__title {
+      font-size: 25px;
+      line-height: 30px; } }
+  
+  h1,
+  h2,
+  h3 h4,
+  h5,
+  h6 {
+    margin: 0; }
+  
+  ul,
+  ol {
+    margin: 0; }
+  
+  p {
+    margin: 0; }
+  
+  html,
+  body {
+    margin: 0;
+    font-size: 100%;
+    background: #eff1f9;
+    font-family: 'Nunito', sans-serif; }
+  
+  a,
+  input {
+    font-family: 'Nunito', sans-serif; }
+  
+  body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none; }
+  
+  a:focus,
+  a:active,
+  a:hover {
+    outline: none;
+    transition: all 0.3s;
+    text-decoration: none; }
+  
