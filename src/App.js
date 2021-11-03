@@ -3,6 +3,7 @@ import {Routes} from './routes';
 
 import Header from './components/template/Header/Header';
 import Sidebar from './components/template/Sidebar/Sidebar';
+import Footer from './components/template/Footer/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
@@ -18,6 +19,7 @@ function App() {
         <Routes/>
       </Router>
     </div>
+    <Footer/>
     </>
   );
 }
