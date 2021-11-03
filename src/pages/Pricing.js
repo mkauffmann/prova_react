@@ -3,6 +3,7 @@ import React from "react";
 import Breadcrumb from '../components/micro/Breadcrumb/Breadcrumb'
 import Heading from "../components/micro/Heading/Heading";
 import PriceCard from "../components/macro/PriceCard/PriceCard";
+import PriceCardAlternate from "../components/macro/PriceCardAlternate/PriceCardAlternate";
 
 function Pricing(props){
     return (
@@ -77,73 +78,30 @@ function Pricing(props){
 
                 {/* <!-- Table #1  --> */}
                 <div className="col-lg-4 col-md-6 px-2 mb-4">
-                  <div className="card text-center card__hover">
-                    <div className="card-header">
-                      <h3 className="display-4"><span className="currency">$</span>19<span className="period">/month</span></h3>
-                    </div>
-                    <div className="card-block">
-                      <h4 className="card-title">
-                        Basic Plan
-                      </h4>
-                      <ul className="list-group">
-                        <li className="list-group-item">1 Domain</li>
-                        <li className="list-group-item">Ultimate Features</li>
-                        <li className="list-group-item">Responsive Ready</li>
-                        <li className="list-group-item">Editor Ready Builder</li>
-                        <li className="list-group-item">Limited UI Blocks</li>
-                        <li className="list-group-item">24/7 Support System</li>
-                      </ul>
-                      <a href="#" className="btn btn-style btn-primary mt-4">Choose Plan</a>
-                    </div>
-                  </div>
+                    <PriceCardAlternate value="19"
+                                        time="month"
+                                        title="Basic Plan"
+                                        items={["1 Domain", "Ultimate Features", "Responsive Ready", "Editor Ready Builder", "Limited UI Blocks", "24/7 Support System"]}
+                                        cta="Choose Plan" />
                 </div>
 
                 {/* <!-- Table #2  --> */}
                 <div className="col-lg-4 col-md-6 px-2 mb-4">
-                  <div className="card text-center card__hover">
-                    <div className="card-header">
-                      <h3 className="display-4"><span className="currency">$</span>29<span className="period">/month</span></h3>
-                    </div>
-                    <div className="card-block">
-                      <h4 className="card-title">
-                        Regular Plan
-                      </h4>
-                      <ul className="list-group">
-                        <li className="list-group-item">10 Domain</li>
-                        <li className="list-group-item">Ultimate Features</li>
-                        <li className="list-group-item">Responsive Ready</li>
-                        <li className="list-group-item">Editor Ready Builder</li>
-                        <li className="list-group-item">Unlimited UI Blocks</li>
-                        <li className="list-group-item">24/7 Support System</li>
-                      </ul>
-                      <a href="#" className="btn btn-style btn-primary mt-4">Choose Plan</a>
-                    </div>
-                  </div>
+                <PriceCardAlternate value="29"
+                                        time="month"
+                                        title="Regular Plan"
+                                        items={["10 Domain", "Ultimate Features", "Responsive Ready", "Editor Ready Builder", "Unlimited UI Blocks", "24/7 Support System"]}
+                                        cta="Choose Plan" />
                 </div>
 
                 {/* <!-- Table #3  --> */}
                 <div className="col-lg-4 col-md-6 px-2 mb-4">
-                  <div className="card text-center card__hover">
-                    <div className="card-header">
-                      <h3 className="display-4"><span className="currency">$</span>39<span className="period">/month</span></h3>
-                    </div>
-                    <div className="card-block">
-                      <h4 className="card-title">
-                        Premium Plan
-                      </h4>
-                      <ul className="list-group">
-                        <li className="list-group-item">15 Domain</li>
-                        <li className="list-group-item">Ultimate Features</li>
-                        <li className="list-group-item">Responsive Ready</li>
-                        <li className="list-group-item">Editor Ready Builder</li>
-                        <li className="list-group-item">Unlimited UI Blocks</li>
-                        <li className="list-group-item">24/7 Support System</li>
-                      </ul>
-                      <a href="#" className="btn btn-style btn-primary mt-4">Choose Plan</a>
-                    </div>
-                  </div>
+                <PriceCardAlternate value="39"
+                                        time="month"
+                                        title="Premium Plan"
+                                        items={["15 Domain", "Ultimate Features", "Responsive Ready", "Editor Ready Builder", "Unlimited UI Blocks", "24/7 Support System"]}
+                                        cta="Choose Plan" />
                 </div>
-
               </div>
             </div>
           </div>
