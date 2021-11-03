@@ -1,164 +1,143 @@
 import React from "react";
 import Breadcrumb from "../components/micro/Breadcrumb/Breadcrumb";
 import Heading from "../components/micro/Heading/Heading";
+import ImgCard from "../components/macro/ImgCard/ImgCard";
 
-function Cards(props){
-    return (
-        <>
-        {/* // <!-- main content start --> */}
-    <div className="main-content">
-      {/* <!-- content --> */}
-      <div className="container-fluid content-top-gap">
-        <Breadcrumb currentPage="Cards" prevPage="Elements"/>
-        
-        {/* <!-- cards --> */}
-        <section className="template-cards">
-          {/* <!-- Card Columns --> */}
-          <div className="card card_border mb-5">
-            <Heading heading="Card Columns"/>
-            <div className="card-body">
-              <div className="card-columns">
-                <div className="card">
-                  <img src="assets/images/cart.jpg" className="card-img-top" alt="..."/>
-                  <div className="card-body">
-                    <h5 className="card-title">Card title that wraps to a new line</h5>
-                    <p className="card-text mb-4">This is a longer card with supporting text below as a natural lead-in to
-                      additional content. This content is a little bit longer.</p>
+import cart from "../assets/images/cart.jpg";
+import template2 from "../assets/images/template2.jpg";
+import dashboard from "../assets/images/dashboard.jpg";
+import desk from "../assets/images/desk.jpg";
+
+function Cards(props) {
+  return (
+    <>
+      {/* // <!-- main content start --> */}
+      <div className="main-content">
+        {/* <!-- content --> */}
+        <div className="container-fluid content-top-gap">
+          <Breadcrumb currentPage="Cards" prevPage="Elements" />
+
+          {/* <!-- cards --> */}
+          <section className="template-cards">
+            {/* <!-- Card Columns --> */}
+            <div className="card card_border mb-5">
+              <Heading heading="Card Columns" />
+              <div className="card-body">
+                <div className="card-columns">
+                  <ImgCard
+                    title="Card title that wraps to a new line"
+                    text="This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer."
+                    img={cart}
+                  />
+
+                  <ImgCard
+                    blockquote
+                    classes="p-3"
+                    quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                        ante."
+                    source="Someone famous in"
+                    sourceTitle="Source Title"
+                  />
+
+                  <ImgCard
+                    img={template2}
+                    title="Card title"
+                    text="This card has supporting text below as a natural lead-in to additional
+                        content."
+                    support="Last updated 3 mins ago"
+                  />
+
+                  <ImgCard
+                    blockquote
+                    classes="p-3 bg-primary text-white text-center"
+                    quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
+                        ante."
+                    source="Someone famous in"
+                    sourceTitle="Source Title"
+                    textWhite
+                  />
+                  <ImgCard
+                    classes="text-center"
+                    title="Card title"
+                    text="This card has a regular title and short paragraphy of text below it."
+                    support="Last updated 3 mins ago"
+                  />
+
+                  <ImgCard img={dashboard} />
+                  <ImgCard
+                    blockquote
+                    classes="p-3 text-right"
+                    quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Integer posuere erat a ante."
+                    source="Someone famous in"
+                    sourceTitle="Source Title"
+                  />
+                  <ImgCard
+                    title="Card title"
+                    text="This is another card with title and supporting text below. This card has
+                        some
+                        additional content to make it slightly taller overall."
+                    support="Last updated 3 mins ago"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* <!-- /Card Columns --> */}
+
+            {/* <!-- Grid Columns --> */}
+            <div className="card card_border mb-5">
+              <Heading heading="Grid Columns" />
+              <div className="card-body">
+                <div className="row row-cols-1 row-cols-md-2">
+                  <div className="col mb-4">
+                    <ImgCard
+                      img={template2}
+                      title="Card Title"
+                      text="This is a longer card with supporting text below as a
+                                natural lead-in to additional content. This content is
+                                a little bit longer."
+                    />
                   </div>
-                </div>
-                <div className="card p-3">
-                  <blockquote className="blockquote mb-0 card-body">
-                    <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                      ante.
-                    </p>
-                    <footer className="blockquote-footer">
-                      <small className="text-muted">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                      </small>
-                    </footer>
-                  </blockquote>
-                </div>
-                <div className="card">
-                  <img src="assets/images/template2.jpg" className="card-img-top" alt="..."/>
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text  mb-4">This card has supporting text below as a natural lead-in to additional
-                      content.
-                    </p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                  <div className="col mb-4">
+                    <ImgCard
+                      img={desk}
+                      title="Card Title"
+                      text="This is a longer card with supporting text below as a
+                                natural lead-in to additional content. This content is
+                                a little bit longer."
+                    />
                   </div>
-                </div>
-                <div className="card bg-primary text-white text-center p-3">
-                  <blockquote className="blockquote mb-0">
-                    <p className="text-white mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere
-                      erat.
-                    </p>
-                    <footer className="blockquote-footer text-white">
-                      <small>
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                      </small>
-                    </footer>
-                  </blockquote>
-                </div>
-                <div className="card text-center">
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text  mb-4">This card has a regular title and short paragraphy of text below it.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                  <div className="col mb-4">
+                    <ImgCard
+                      img={cart}
+                      title="Card Title"
+                      text="This is a longer card with supporting text below as a
+                                natural lead-in to additional content. This content is
+                                a little bit longer."
+                    />
                   </div>
-                </div>
-                <div className="card">
-                  <img src="assets/images/dashboard.jpg" className="card-img-top" alt="..."/>
-                </div>
-                <div className="card p-3 text-right">
-                  <blockquote className="blockquote mb-0">
-                    <p className="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a
-                      ante.
-                    </p>
-                    <footer className="blockquote-footer">
-                      <small className="text-muted">
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                      </small>
-                    </footer>
-                  </blockquote>
-                </div>
-                <div className="card">
-                  <div className="card-body">
-                    <h5 className="card-title">Card title</h5>
-                    <p className="card-text  mb-4">This is another card with title and supporting text below. This card has
-                      some
-                      additional content to make it slightly taller overall.</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+                  <div className="col mb-4">
+                    <ImgCard
+                      img={dashboard}
+                      title="Card Title"
+                      text="This is a longer card with supporting text below as a
+                                natural lead-in to additional content. This content is
+                                a little bit longer."
+                    />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          {/* <!-- /Card Columns --> */}
-
-          {/* <!-- Grid Columns --> */}
-          <div className="card card_border mb-5">
-            <Heading heading="Grid Columns"/>
-            <div className="card-body">
-              <div className="row row-cols-1 row-cols-md-2">
-                <div className="col mb-4">
-                  <div className="card">
-                    <img src="assets/images/template2.jpg" className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional
-                        content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col mb-4">
-                  <div className="card">
-                    <img src="assets/images/desk.jpg" className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional
-                        content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col mb-4">
-                  <div className="card">
-                    <img src="assets/images/cart.jpg" className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional
-                        content.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col mb-4">
-                  <div className="card">
-                    <img src="assets/images/dashboard.jpg" className="card-img-top" alt="..."/>
-                    <div className="card-body">
-                      <h5 className="card-title">Card title</h5>
-                      <p className="card-text">This is a longer card with supporting text below as a natural lead-in to
-                        additional
-                        content. This content is a little bit longer.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* <!-- /Grid Columns --> */}
-
-        </section>
-        {/* <!-- //cards --> */}
-
+            {/* <!-- /Grid Columns --> */}
+          </section>
+          {/* <!-- //cards --> */}
+        </div>
+        {/* <!-- //content --> */}
       </div>
-      {/* <!-- //content --> */}
-    </div>
-    {/* <!-- main content end--> */}
+      {/* <!-- main content end--> */}
     </>
-    )
+  );
 }
 
-export default Cards
+export default Cards;
