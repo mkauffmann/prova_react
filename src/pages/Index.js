@@ -1,116 +1,80 @@
 import React from "react";
+import Breadcrumb from "../components/micro/Breadcrumb/Breadcrumb";
+import WelcomeMsg from "../components/micro/WelcomeMsg/WelcomeMsg";
+import StatisticsCard from "../components/macro/StatisticsCard/StatisticsCard";
+import ChartCard from "../components/macro/ChartCard/ChartCard";
 
-function Index(props){
-    return (
-        <>
-             {/* <!-- main content start --> */}
-    <div className="main-content">
+function Index(props) {
+  return (
+    <>
+      {/* <!-- main content start --> */}
+      <div className="main-content">
+        {/* <!-- content --> */}
+        <div className="container-fluid content-top-gap">
+          <Breadcrumb currentPage="Dashboard" />
+          <WelcomeMsg name="Jonas" />
 
-      {/* <!-- content --> */}
-      <div className="container-fluid content-top-gap">
-
-        <nav aria-label="breadcrumb">
-          <ol className="breadcrumb my-breadcrumb">
-            <li className="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li className="breadcrumb-item active" aria-current="page">Dashboard</li>
-          </ol>
-        </nav>
-        <div className="welcome-msg pt-3 pb-4">
-          <h1>Hi <span className="text-primary">John</span>, Welcome back</h1>
-          <p>Very detailed & featured admin.</p>
-        </div>
-
-        {/* <!-- statistics data --> */}
-        <div className="statistics">
-          <div className="row">
-            <div className="col-xl-6 pr-xl-2">
-              <div className="row">
-                <div className="col-sm-6 pr-sm-2 statistics-grid">
-                  <div className="card card_border border-primary-top p-4">
-                    <i className="lnr lnr-users"> </i>
-                    <h3 className="text-primary number">29.75 M</h3>
-                    <p className="stat-text">Total Users</p>
-                  </div>
-                </div>
-                <div className="col-sm-6 pl-sm-2 statistics-grid">
-                  <div className="card card_border border-primary-top p-4">
-                    <i className="lnr lnr-eye"> </i>
-                    <h3 className="text-secondary number">51.25 K</h3>
-                    <p className="stat-text">Daily Visitors</p>
-                  </div>
+          {/* <!-- statistics data --> */}
+          <div className="statistics">
+            <div className="row">
+              <div className="col-xl-6 pr-xl-2">
+                <div className="row">
+                  <StatisticsCard
+                    icon="user"
+                    color="primary"
+                    number="29.75 M"
+                    text="Total Users"
+                  />
+                  <StatisticsCard
+                    icon="eye"
+                    color="secondary"
+                    number="51.25 K"
+                    text="Daily Visitors"
+                  />
                 </div>
               </div>
-            </div>
-            <div className="col-xl-6 pl-xl-2">
-              <div className="row">
-                <div className="col-sm-6 pr-sm-2 statistics-grid">
-                  <div className="card card_border border-primary-top p-4">
-                    <i className="lnr lnr-cloud-download"> </i>
-                    <h3 className="text-success number">166.89 M</h3>
-                    <p className="stat-text">Downloads</p>
-                  </div>
-                </div>
-                <div className="col-sm-6 pl-sm-2 statistics-grid">
-                  <div className="card card_border border-primary-top p-4">
-                    <i className="lnr lnr-cart"> </i>
-                    <h3 className="text-danger number">1,250k</h3>
-                    <p className="stat-text">Purchased</p>
-                  </div>
+              <div className="col-xl-6 pl-xl-2">
+                <div className="row">
+                  <StatisticsCard
+                    icon="cloud"
+                    color="success"
+                    number="166.89 M"
+                    text="Downloads"
+                  />
+                  <StatisticsCard
+                    icon="cart"
+                    color="danger"
+                    number="1,250k"
+                    text="Purchased"
+                  />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* <!-- //statistics data --> */}
+          {/* <!-- //statistics data --> */}
 
-        {/* <!-- charts --> */}
-        <div className="chart">
-          <div className="row">
-            <div className="col-lg-6 pr-lg-2 chart-grid">
-              <div className="card text-center card_border">
-                <div className="card-header chart-grid__header">
-                  Bar Chart
-                </div>
-                <div className="card-body">
-                  {/* <!-- bar chart --> */}
-                  <div id="container">
-                    <canvas id="barchart"></canvas>
-                  </div>
-                  {/* <!-- //bar chart --> */}
-                </div>
-                <div className="card-footer text-muted chart-grid__footer">
-                  Updated 2 hours ago
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 pl-lg-2 chart-grid">
-              <div className="card text-center card_border">
-                <div className="card-header chart-grid__header">
-                  Line Chart
-                </div>
-                <div className="card-body">
-                  {/* <!-- line chart --> */}
-                  <div id="container">
-                    <canvas id="linechart"></canvas>
-                  </div>
-                  {/* <!-- //line chart --> */}
-                </div>
-                <div className="card-footer text-muted chart-grid__footer">
-                  Updated just now
-                </div>
-              </div>
+          {/* <!-- charts --> */}
+          <div className="chart">
+            <div className="row">
+              <ChartCard
+                chart="barchart"
+                header="Bar Chart"
+                footer="Updated 2 hours ago"
+              />
+              <ChartCard
+                chart="linechart"
+                header="Line Chart"
+                footer="Updated just now"
+              />
             </div>
           </div>
+          {/* <!-- //charts --> */}
         </div>
-        {/* <!-- //charts --> */}
-
+        {/* <!-- //content --> */}
       </div>
-      {/* <!-- //content --> */}
-    </div>
-    {/* <!-- main content end--> */}
-        </>
-        
-    )
+      {/* <!-- main content end--> */}
+    </>
+  );
 }
 
-export default Index
+export default Index;
