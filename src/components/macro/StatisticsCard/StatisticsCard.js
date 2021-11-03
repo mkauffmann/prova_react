@@ -9,15 +9,15 @@ function StatisticsCard(props) {
 
         switch(props.icon){
             case 'user':
-                return <FontAwesomeIcon icon={faUser} className="lnr"/>
+                return <i className="lnr lnr-users"><FontAwesomeIcon icon={faUser}/></i>
             case 'eye': 
-                return <FontAwesomeIcon icon={faEye} className="lnr"/>
+                return <i className="lnr lnr-eye"><FontAwesomeIcon icon={faEye} /></i>
             case 'cloud':
-                return <FontAwesomeIcon icon={faCloudDownloadAlt} className="lnr"/>
+                return <i className="lnr lnr-cloud-download"><FontAwesomeIcon icon={faCloudDownloadAlt}/></i>
             case 'cart':
-                return <FontAwesomeIcon icon={faCartPlus} className="lnr"/>
+                return <i className="lnr lnr-cart"><FontAwesomeIcon icon={faCartPlus}/></i>
             default:
-                return <FontAwesomeIcon icon={faUser} className="lnr"/>
+                return <i className="lnr lnr-users"><FontAwesomeIcon icon={faUser}/></i>
         }
         
 
